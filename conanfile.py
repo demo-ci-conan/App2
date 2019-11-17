@@ -12,6 +12,8 @@ class App2(ConanFile):
            "url": "auto",
            "revision": "auto"}
 
+    exports_sources = "LICENSE" # to avoid build info bug
+
     def requirements(self):
         self.requires("libC/0.0@demo/testing")
         self.requires("libD/0.0@demo/testing")
